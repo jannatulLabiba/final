@@ -1,0 +1,179 @@
+body {
+    background: linear-gradient(120deg, #32327b, #0f3460, #b22f8b, #0f5f6d, #1a2c2e);
+    background-size: 600% 600%;
+    animation: gradientBackground 10s ease infinite;
+    color: #cb5757;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.navbar {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.neon-text {
+    color: #00f2fe;
+    text-shadow: 0 0 5px #fe7200, 0 0 10px #00f2fe, 0 0 20px #edfe00;
+}
+
+
+.neon-btn {
+    background-color: #6100fe;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-shadow: 0 0 5px #8c00fe, 0 0 10px #fe00a5;
+    transition: all 0.3s ease;
+}
+
+.neon-btn:hover {
+    background-color: #d34343;
+    color: #00f2fe;
+    box-shadow: 0 0 10px #1b1c1c, 0 0 20px #00f2fe;
+    transform: scale(1.1);
+}
+
+#countryData {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+
+.country-card {
+    background: linear-gradient(135deg, #1f4068, #1b1b2f);
+    color: #fff;
+    padding: 20px;
+    border: 1px solid #00f2fe;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Default for smaller devices */
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.country-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #e5fe00, 0 0 25px #dcfe00;
+}
+
+/* Flag Image Adjustments */
+.country-flag {
+width: 100%;
+height: auto;
+border-radius: 10px;
+margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    font-size: 0.9em;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 15px 20px;
+    margin-top: 50px; /* Adds space between footer and previous content */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure footer stays at the bottom if content is short */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    flex: 1;
+}
+
+#countryData {
+    flex: 1;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .neon-text {
+font-size: 1.8rem;
+    }
+
+    .country-card {
+    width: 45%; /* Adjust width for tablets */
+    margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .country-card {
+width: 90%; /* Full width for mobile */
+    margin-bottom: 15px;
+    }
+
+    .neon-text {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .country-card {
+width: 100%;
+    }
+
+    .neon-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    }
+
+    .neon-text {
+    font-size: 1.2rem;
+    }
+}
+
+@keyframes fall {
+    0% {
+    transform: translateY(0);
+    }
+    100% {
+    transform: translateY(100vh);
+    }
+}
+
+@media (max-width: 1024px) {
+    .country-card {
+        max-width: 90%; /
+    }
+}
+
+
+.falling-emoji {
+    position: absolute;
+    top: 0;
+    left: 25%;
+    font-size: 2rem;
+    animation: fall 7s linear infinite;
+    z-index: 9999;
+}
